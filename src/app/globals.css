@@ -23,11 +23,82 @@ body {
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
-} */
+    rgb(var(--background-start-rgb)); */
+}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #6d6e75;
+  text-transform: capitalize;
+}
+.container {
+  max-width: 70%;
+  margin: auto;
+}
+
+ul,
+li,
+a {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+/*--------- header-------------*/
+
+header .open-menu {
+  display: none;
+}
+header .container {
+  max-width: 80%;
+}
+
+/*--------- header-------------*/
+@media only screen and (max-width: 768px) {
+  header .open-menu {
+    display: block;
+  }
+  header .desktop-view {
+    display: none;
+  }
+  header .mobile-view {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background-color: #fff;
+    z-index: 55;
+  }
+  header .mobile-view ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.instructor .images {
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.instructor .images:hover img {
+  transform: scale(1.2);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  opacity: 1;
 }
