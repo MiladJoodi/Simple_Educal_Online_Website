@@ -7,10 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: "#2B4EFF",
+        secondary: "#B8DDE3",
+        backbg: "rgba(43, 78, 255, 0.7);",
+      },
+      screens: {
+        md: { max: "800px" },
+        sm: { max: "639px" },
+      },
+      boxShadow: {
+        shadow1: "0px 30px 40px 0px rgba(1, 11, 60, 0.1)",
+        shadow2: "0px 30px 60px 0px rgba(0, 4, 48, 0.3)",
       },
     },
   },

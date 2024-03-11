@@ -57,3 +57,28 @@ export const LinkData = [
       title: "The business Intelligence analyst Course 2022",
     },
   ]
+
+  export const footerData = [
+    {
+      id: 1,
+      header: "Company",
+      subtitle:[
+        {
+          id: 11,
+          header: "Contact"
+        },
+        {
+          id: 12,
+          header: "Portfolio"
+        },
+        {
+          id: 13,
+          header: "Blog"
+        },
+        {
+          id: 14,
+          header: "Our Team"
+        }
+      ]
+    }
+  ]

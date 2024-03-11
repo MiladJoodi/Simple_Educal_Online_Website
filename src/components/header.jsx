@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import Logo from '../../public/images/logo-black.png'
-import { HiViewGrid } from "react-icons/hi";
+import { HiViewGrid, HiOutlineMenuAlt1 } from "react-icons/hi";
 import { BiShoppingBag } from "react-icons/bi";
 import { LinkData } from "@/lib/dummydata";
 import Link from "next/link";
@@ -32,12 +32,12 @@ const Header = () => {
                 {/* Header Nav Center */}
                 <nav className={open ? "mobile-view" : "desktop-view"}>
                     <ul className="flex items-center gap-6">
-                        {LinkData.map((link, index)=>(
+                        {LinkData.map((link, index) => (
                             <li key={index}>
-                                <Link 
-                                href={link.url}
-                                className={({isActive})=> isActive ? "text-primary text-sm" : "text-[15px]"}
-                                
+                                <Link
+                                    href={link.url}
+                                    className={({ isActive }) => isActive ? "text-primary text-sm" : "text-[15px]"}
+
                                 >
                                     {link.title}
                                 </Link>
@@ -47,11 +47,14 @@ const Header = () => {
                 </nav>
 
                 {/* Header Basket Right */}
-                <div>
+                <div className="account flex items-center gap-5">
                     <button className="">
                         <BiShoppingBag size={25} />
                     </button>
                     <button>Login</button>
+                    <button className="open-menu" onClick={()=> setOpen(!open)}>
+                        <HiOutlineMenuAlt1 size={25} />
+                    </button>
                 </div>
 
 
